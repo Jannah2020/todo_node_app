@@ -1,16 +1,17 @@
 {
   "name": "node_js",
   "version": "1.0.0",
-  "description": "",
+  "description": "A basic node app for our todo",
   "main": "express_app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "app": "nodemon express_app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jannat",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^6.1.1"
+    "mongoose": "^6.1.1",
+    "nodemon": "^2.0.15"
   }
 }
