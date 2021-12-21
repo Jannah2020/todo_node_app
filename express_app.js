@@ -19,7 +19,7 @@ server.listen(PORT, function(){
         console.log('DB is connected');
         server.get('/',function(req, res){
             res.status(200).json( {success: true, message: 'WELCOME, this is Jannats todo node App'})
-        })
+        });
         server.get('/todos',todoController.getAllTodos); 
         server.get('/todo/:id',todoController.getTodoById); 
         server.post('/todo',todoController.insertTodo);
