@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 
 const mongoose = require('mongoose')
 const todoController = require('./contorllers/todoController');
 const server = express();
 
-const mongo_db_url = 'mongodb+srv://Sharah:Wrongpassc0de@cluster0.e0mns.mongodb.net/todo_db?retryWrites=true&w=majority'
+const mongo_db_url = ''
 
 // const mongo_db_url = 'mongodb://localhost/todos_db';
 server.use(express.json());
@@ -12,7 +13,7 @@ server.use(express.json());
 
 server.listen(4000, function(){
     console.log('Server has started running in express');
-    mongoose.connect(mongo_db_url)
+    mongoose.connect(process.env.MONGO_DB_ATLAS_URL)
     .then (function(){
         console.log('DB is connected');
         server.get('/todos',todoController.getAllTodos); 
